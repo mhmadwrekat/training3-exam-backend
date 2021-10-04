@@ -11,7 +11,6 @@ const PORT = process.env.PORT;
 const API = process.env.API_URL ;
 const MONGO = process.env.MONGO_URL ;
 mongoose.connect(`mongodb+srv://${MONGO}?retryWrites=true&w=majority`,{useNewUrlParser:true,useUnifiedTopology:true});
-
 app.listen(PORT, ()=>{
     console.log('You In PORT : ', PORT);
 })
@@ -42,7 +41,6 @@ let seed = () => {
         title : "test00" ,
         api_model : "test00",
         artist_display : "test00"
-
     })
     newPage.save();
 }
@@ -91,28 +89,3 @@ const deletePageController = async (req,res) => {
     })
 }
 app.delete('/delete/:id', deletePageController)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
